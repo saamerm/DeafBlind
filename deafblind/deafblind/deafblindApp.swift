@@ -12,7 +12,8 @@ struct deafblindApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            MyTabView()
+//            MyTabView()
+            IntroView()
         }
     }
 }
