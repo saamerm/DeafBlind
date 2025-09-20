@@ -23,14 +23,29 @@ struct IntroView: View {
                     .ignoresSafeArea()
                 ScrollView{
                     VStack{
-                        Text("Welcome to SeeHearBraille").padding()
-                        
+                        Image("logo")
+                        Text("Welcome to SeeHearBraille")
+                            .fontWeight(.bold)
+                            .padding()
+                            .font(Font.custom("Avenir", size: 18))
+                            .foregroundColor(Color("SecondaryColor"))
+                            .padding(.horizontal)
+                        Text("""
+SeeHearBraille helps you watch TV using your phone and a Bluetooth braille keyboard.
+It uses your camera to tell you what channel you're watching.
+It listens to the TV and sends the words to your braille keyboard.
+You don’t need to see or hear—just touch and read.
+""")
+                        .font(Font.custom("Avenir", size: 16))
+                        .foregroundColor(Color("SecondaryColor"))
+                        .padding()
+
                         Text("\(Text(NSLocalizedString("By tapping Continue, you agree to our", comment: "By tapping Continue, you agree to our"))) \(Text("Privacy Policy").underline())")
                             .font(Font.custom("Avenir", size: 18))
                             .foregroundColor(Color("SecondaryColor"))
                             .padding(.horizontal)
                             .onTapGesture {
-                                openURL(URL(string: "https://www.conferencecaptioning.com/privacy-policy.html")!)
+                                openURL(URL(string: "https://raw.githubusercontent.com/saamerm/DeafBlind/refs/heads/main/privacy-policy.html")!)
                             }
                         Button(
                             action: {
