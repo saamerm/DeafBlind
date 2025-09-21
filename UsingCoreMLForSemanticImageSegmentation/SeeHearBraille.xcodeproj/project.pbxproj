@@ -30,6 +30,7 @@
 		E9F06D4A2E8038F500CDB6C1 /* VisionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F06D452E8037C900CDB6C1 /* VisionView.swift */; };
 		E9F06D4B2E8038F800CDB6C1 /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F06D462E8037D300CDB6C1 /* ChannelView.swift */; };
 		E9F06D4D2E80391500CDB6C1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F06D4C2E80391500CDB6C1 /* Launch Screen.storyboard */; };
+		E9F06D4F2E803F9A00CDB6C1 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F06D4E2E803F9900CDB6C1 /* SpeechRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,6 +72,7 @@
 		E9F06D452E8037C900CDB6C1 /* VisionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionView.swift; sourceTree = "<group>"; };
 		E9F06D462E8037D300CDB6C1 /* ChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
 		E9F06D4C2E80391500CDB6C1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		E9F06D4E2E803F9900CDB6C1 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		D8C8947F2BE931A10043DB71 /* SegmentationApp */ = {
 			isa = PBXGroup;
 			children = (
+				E9F06D4E2E803F9900CDB6C1 /* SpeechRecognizer.swift */,
 				E9F06D3F2E7FA84300CDB6C1 /* MLMainView.swift */,
 				E9F06D3D2E7FA75900CDB6C1 /* MLViewModel.swift */,
 				E9F06D3B2E7FA19B00CDB6C1 /* CameraManager.swift */,
@@ -302,6 +305,7 @@
 				E9F06D382E7F9E8800CDB6C1 /* CameraViewModel.swift in Sources */,
 				711F1F172C2CAD310079B854 /* DETRResnet50SemanticSegmentationF16P8.mlpackage in Sources */,
 				E9F06D492E8038F100CDB6C1 /* SpeechView.swift in Sources */,
+				E9F06D4F2E803F9A00CDB6C1 /* SpeechRecognizer.swift in Sources */,
 				E9F06D4A2E8038F500CDB6C1 /* VisionView.swift in Sources */,
 				D8C894D12BEAD1230043DB71 /* CoreImageExtensions.swift in Sources */,
 			);
@@ -455,7 +459,9 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = SeeHearBraille;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Capture photos for image recognition and segmentation";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses your camera to capture the frame for image recognition";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses the microphone to transcribe speech to text so it can be used by Braille keyboards";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app uses the speech recognition on your phone to transcribe speech to text so it can be used by Braille keyboards";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -498,7 +504,9 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = SeeHearBraille;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Capture photos for image recognition and segmentation";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses your camera to capture the frame for image recognition";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses the microphone to transcribe speech to text so it can be used by Braille keyboards";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app uses the speech recognition on your phone to transcribe speech to text so it can be used by Braille keyboards";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

@@ -70,6 +70,8 @@ struct ChannelView: View {
             }
         }
         .padding()
+        .navigationTitle("Channel Finder").navigationBarTitleDisplayMode(.inline)
+//        .navigationBarTitleTextColor(Color("SecondaryColor"))
     }
 }
 

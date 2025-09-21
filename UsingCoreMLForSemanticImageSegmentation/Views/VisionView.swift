@@ -10,12 +10,11 @@ import SwiftUI
 struct VisionView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            MLMainView()
+            Text("Hello")
         }
-        .padding()
+        .navigationTitle("Speech Converter").navigationBarTitleDisplayMode(.inline)
+//        .navigationBarTitleTextColor(Color("SecondaryColor"))
     }
 }
 
