@@ -31,6 +31,7 @@
 		E9F06D4B2E8038F800CDB6C1 /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F06D462E8037D300CDB6C1 /* ChannelView.swift */; };
 		E9F06D4D2E80391500CDB6C1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F06D4C2E80391500CDB6C1 /* Launch Screen.storyboard */; };
 		E9F06D4F2E803F9A00CDB6C1 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F06D4E2E803F9900CDB6C1 /* SpeechRecognizer.swift */; };
+		E9F06D532E808A0800CDB6C1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F06D522E808A0600CDB6C1 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,6 +74,7 @@
 		E9F06D462E8037D300CDB6C1 /* ChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
 		E9F06D4C2E80391500CDB6C1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E9F06D4E2E803F9900CDB6C1 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		E9F06D522E808A0600CDB6C1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		D8C8947F2BE931A10043DB71 /* SegmentationApp */ = {
 			isa = PBXGroup;
 			children = (
+				E9F06D522E808A0600CDB6C1 /* Extensions.swift */,
 				E9F06D4E2E803F9900CDB6C1 /* SpeechRecognizer.swift */,
 				E9F06D3F2E7FA84300CDB6C1 /* MLMainView.swift */,
 				E9F06D3D2E7FA75900CDB6C1 /* MLViewModel.swift */,
@@ -297,6 +300,7 @@
 				E9F06D472E8038E800CDB6C1 /* IntroView.swift in Sources */,
 				E9F06D4B2E8038F800CDB6C1 /* ChannelView.swift in Sources */,
 				E9F06D402E7FA84500CDB6C1 /* MLMainView.swift in Sources */,
+				E9F06D532E808A0800CDB6C1 /* Extensions.swift in Sources */,
 				E9F06D482E8038EC00CDB6C1 /* MyTabView.swift in Sources */,
 				71F286B32C2DE54E0004D109 /* SegmentationModelHelper.swift in Sources */,
 				E9F06D3C2E7FA1A100CDB6C1 /* CameraManager.swift in Sources */,

@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct MLMainView: View {
-    
+    @Binding var text: [String]
     @StateObject var viewModel = MLViewModel()
     @StateObject var cameraManager = CameraManager()
     
@@ -19,18 +19,19 @@ struct MLMainView: View {
     @State var overlaySize: CGSize = .zero
     var loadModel: Bool
 
-    init(loadModel: Bool = true) {
+    init(text: Binding<[String]>, loadModel: Bool = true) {
+        self._text = text
         self.loadModel = loadModel
     }
 
     var body: some View {
-        Group {
+//        Group {
 //            if cameraManager.permissionGranted {
-                mainContentView
+        mainContentView
 //            } else {
 //                permissionView
 //            }
-        }
+//        }
         .task {
             // Request permission and load the model on appear
             if loadModel {
@@ -42,6 +43,8 @@ struct MLMainView: View {
         .onReceive(timer) { _ in
             Task {
                 await viewModel.analyzeLatestFrame()
+                print(viewModel.predictedLabels)
+                text = viewModel.predictedLabels
             }
         }
     }
@@ -191,3 +194,4 @@ struct MLPredictedLabelGridCell: View {
         topTrailing: cornerRadius
     )
 }
+

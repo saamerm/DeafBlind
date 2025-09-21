@@ -27,7 +27,7 @@ struct IntroView: View {
                         Text("Welcome to SeeHearBraille")
                             .fontWeight(.bold)
                             .padding()
-                            .font(Font.custom("Avenir", size: 18))
+                            .font(Font.custom("Avenir", size: 20))
                             .foregroundColor(Color("SecondaryColor"))
                             .padding(.horizontal)
                         Text("""

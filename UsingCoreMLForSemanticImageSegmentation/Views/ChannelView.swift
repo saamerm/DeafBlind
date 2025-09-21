@@ -29,49 +29,51 @@ struct ChannelView: View {
     }
     
     var body: some View {
-        VStack(spacing: 20) {
-            Text("Choose your State, City & Channel Category to find what numbers to press on your remote")
-            // State picker
-            Picker("State", selection: $selectedState) {
-                ForEach(states, id: \.self) { Text($0) }
-            }
-            .pickerStyle(.automatic)
-            
-            // City picker
-            Picker("City", selection: $selectedCity) {
-                ForEach(availableCities, id: \.self) { Text($0) }
-            }
-            .pickerStyle(.wheel)
-            
-            // Category picker
-            Picker("Category", selection: $selectedCategory) {
-                ForEach(categories, id: \.self) { Text($0) }
-            }
-            .pickerStyle(.segmented)
-            
-            Divider()
-            
-            // Results
-            if filteredChannels.isEmpty {
-                Text("No channels found.").foregroundColor(.secondary)
-            } else {
-                List(filteredChannels) { channel in
-                    HStack {
-                        Text("\(channel.network) (\(channel.callSign))")
-                            .font(.headline)
-                        Spacer()
-                        Text("Channel \(channel.number)")
-                            .bold()
-                            .font(.title3)
-                            .accessibilityLabel("Channel number \(channel.number)")
+        NavigationView{
+            VStack(spacing: 20) {
+                Text("Choose your State, City & Channel Category to find what numbers to press on your remote")
+                // State picker
+                Picker("State", selection: $selectedState) {
+                    ForEach(states, id: \.self) { Text($0) }
+                }
+                .pickerStyle(.automatic)
+                
+                // City picker
+                Picker("City", selection: $selectedCity) {
+                    ForEach(availableCities, id: \.self) { Text($0) }
+                }
+                .pickerStyle(.wheel)
+                
+                // Category picker
+                Picker("Category", selection: $selectedCategory) {
+                    ForEach(categories, id: \.self) { Text($0) }
+                }
+                .pickerStyle(.segmented)
+                
+                Divider()
+                
+                // Results
+                if filteredChannels.isEmpty {
+                    Text("No channels found.").foregroundColor(.secondary)
+                } else {
+                    List(filteredChannels) { channel in
+                        HStack {
+                            Text("\(channel.network) (\(channel.callSign))")
+                                .font(.headline)
+                            Spacer()
+                            Text("Channel \(channel.number)")
+                                .bold()
+                                .font(.title3)
+                                .accessibilityLabel("Channel number \(channel.number)")
+                        }
+                        .padding(.vertical, 8)
                     }
-                    .padding(.vertical, 8)
                 }
             }
+            .padding()
+            .navigationTitle("Channel Finder").navigationBarTitleDisplayMode(.inline)
+            //        .navigationBarTitleTextColor(Color("SecondaryColor"))
         }
-        .padding()
-        .navigationTitle("Channel Finder").navigationBarTitleDisplayMode(.inline)
-//        .navigationBarTitleTextColor(Color("SecondaryColor"))
     }
 }
 

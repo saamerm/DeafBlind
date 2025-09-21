@@ -10,8 +10,9 @@ final class MLViewModel: ObservableObject {
     typealias ModelOutput = DETRResnet50SemanticSegmentationF16P8Output
     
     @Published private(set) var isModelLoaded = false
+    @Published var results: [String] = []
     private var model: Model?
-    private var labelNames: [String] = []
+    @Published private var labelNames: [String] = []
     private var resultArray: MLShapedArray<Int32>?
     private var masks = [String: Image]()
 
@@ -148,6 +149,7 @@ final class MLViewModel: ObservableObject {
         if Set(newPredictedLabels) != Set(self.predictedLabels) {
             print("Found new labels: \(newPredictedLabels)")
             self.resultArray = newResultArray
+            
             self.predictedLabels = newPredictedLabels
             self.selectedLabel = nil // Reset selection when labels change
             self.masks = [:]
