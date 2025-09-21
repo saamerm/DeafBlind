@@ -27,22 +27,50 @@ struct VisionView: View {
 
 struct BoxView: View {
     @State var text:[String] = []
+    @State var displayText = ""
     var body: some View {
 //        ScrollView{
             VStack {
                 MLMainView(text: $text)
                 Spacer()
-                if #available(iOS 26.0, *) {
-                    SmartView(text: $text)
-                } else {
-                    ForEach(text, id: \.self){
-                        Text($0)
-                    }
-                }
+//                if #available(iOS 26.0, *) {
+//                    SmartView(text: $text)
+//                } else {
+//                    if text.contains("TV") || text.contains("laptop"){
+                        Text(displayText)
+//                        Text("The TV is showing: ")
+//                        ForEach(text, id: \.self){
+//                            Text($0)
+//                        }
+//                    }
+//                }
 //                Text("Hey")
             }
 //        }
         .padding(1)
+        .onChange(of: text, {
+            // 1. Remove "tv" and "laptop"
+            let filtered = text.filter { !["tv", "laptop"].contains($0.lowercased()) }
+
+            // 2. Take only first 3 items
+            let firstThree = Array(filtered.prefix(3))
+
+            // 3. Format with commas and "and"
+            let description: String
+            switch firstThree.count {
+            case 0:
+                description = ""
+            case 1:
+                description = firstThree[0]
+            case 2:
+                description = firstThree.joined(separator: " and ")
+            default:
+                description = firstThree.dropLast().joined(separator: ", ") + ", and " + firstThree.last!
+            }
+
+            // 4. Final output
+            displayText = "The TV is showing something with a \(description)"
+        })
     }
 }
 
