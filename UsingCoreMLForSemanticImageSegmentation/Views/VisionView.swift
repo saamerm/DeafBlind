@@ -18,7 +18,7 @@ struct VisionView: View {
                 }
             }
             .padding(1)
-            .navigationTitle("Speech Converter")
+            .navigationTitle("Scene Description")
             .navigationBarTitleDisplayMode(.inline)
             //        .navigationBarTitleTextColor(Color("SecondaryColor"))
         }
@@ -31,8 +31,13 @@ struct BoxView: View {
 //        ScrollView{
             VStack {
                 MLMainView(text: $text)
-                ForEach(text, id: \.self){
-                    Text($0)
+                Spacer()
+                if #available(iOS 26.0, *) {
+                    SmartView(text: $text)
+                } else {
+                    ForEach(text, id: \.self){
+                        Text($0)
+                    }
                 }
 //                Text("Hey")
             }

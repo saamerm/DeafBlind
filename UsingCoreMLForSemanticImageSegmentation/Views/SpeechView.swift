@@ -67,7 +67,7 @@ struct SpeechView: View {
     // New states
     @State private var usingBrailleKeyboard = false
     @State private var brailleKeyCount: String = ""
-    
+    @FocusState private var isTextFieldFocused : Bool
     var body: some View {
         NavigationView {
             ScrollView {
@@ -82,12 +82,16 @@ struct SpeechView: View {
                     
                     if usingBrailleKeyboard {
                         // Ask for number of keys
-                        TextField("Enter number of keys", text: $brailleKeyCount)
-                            .keyboardType(.numberPad)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .padding(.horizontal)
-                        Button("Done"){
-                            print("Do nothing")
+                        HStack{
+                            TextField("Enter number of keys", text: $brailleKeyCount)
+                                .keyboardType(.numberPad)
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                .padding(.horizontal)
+                                .focused($isTextFieldFocused)
+                            Button("Done"){
+                                print("Do nothing")
+                                isTextFieldFocused = false
+                            }
                         }
                         // Show split transcript if number is valid
                         if let keyCount = Int(brailleKeyCount), keyCount > 0 {
@@ -130,7 +134,7 @@ struct SpeechView: View {
                 }
             }
             .padding(.vertical)
-            .navigationTitle("Scene Description")
+            .navigationTitle("Speech Converter")
             .navigationBarTitleDisplayMode(.inline)
         }
     }
@@ -153,9 +157,10 @@ struct BrailleTranscriptView: View {
         VStack(alignment: .leading, spacing: 10) {
             ForEach(chunks.indices, id: \.self) { index in
                 Text(chunks[index])
-                    .lineLimit(0)
+                    .lineLimit(nil)
+                    .fixedSize(horizontal: false, vertical: true)
                     .padding()
-                    .frame(minHeight: 60, alignment: .leading)
+                    .frame(maxWidth: .infinity, minHeight: 60, alignment: .leading)
                     .background(Color(.secondarySystemBackground))
                     .cornerRadius(8)
                     .accessibilityElement(children: .combine) // Ensures VoiceOver reads each box separately

@@ -39,12 +39,15 @@ struct MLMainView: View {
             }
             cameraManager.requestPermission()
         }
+        .onChange(of: viewModel.predictedLabels, {
+            print("viewModel.predictedLabels")
+            print(viewModel.predictedLabels)
+            text = viewModel.predictedLabels
+        })
         // This receiver will fire every 5 seconds
         .onReceive(timer) { _ in
             Task {
                 await viewModel.analyzeLatestFrame()
-                print(viewModel.predictedLabels)
-                text = viewModel.predictedLabels
             }
         }
     }
@@ -87,14 +90,14 @@ struct MLMainView: View {
                     .font(.caption)
             }
             
-            ScrollView {
-                MLPredictedLabelsGridView(
-                    predictedLabels: viewModel.predictedLabels,
-                    selectedLabel: $viewModel.selectedLabel
-                )
-                .padding(8)
-            }
-            .frame(height: 150) // Give the scroll view a fixed height
+//            ScrollView {
+//                MLPredictedLabelsGridView(
+//                    predictedLabels: viewModel.predictedLabels,
+//                    selectedLabel: $viewModel.selectedLabel
+//                )
+//                .padding(8)
+//            }
+//            .frame(height: 150) // Give the scroll view a fixed height
 
             if !viewModel.isModelLoaded {
                 ProgressView("Loading the AI model, this may take a few minutes but is only done once...")

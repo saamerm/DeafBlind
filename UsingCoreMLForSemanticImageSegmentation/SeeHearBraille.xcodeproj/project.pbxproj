@@ -32,6 +32,7 @@
 		E9F06D4D2E80391500CDB6C1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F06D4C2E80391500CDB6C1 /* Launch Screen.storyboard */; };
 		E9F06D4F2E803F9A00CDB6C1 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F06D4E2E803F9900CDB6C1 /* SpeechRecognizer.swift */; };
 		E9F06D532E808A0800CDB6C1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F06D522E808A0600CDB6C1 /* Extensions.swift */; };
+		E9F06D552E80A7DF00CDB6C1 /* SmartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F06D542E80A7D900CDB6C1 /* SmartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,6 +76,7 @@
 		E9F06D4C2E80391500CDB6C1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E9F06D4E2E803F9900CDB6C1 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		E9F06D522E808A0600CDB6C1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E9F06D542E80A7D900CDB6C1 /* SmartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		D8C8947F2BE931A10043DB71 /* SegmentationApp */ = {
 			isa = PBXGroup;
 			children = (
+				E9F06D542E80A7D900CDB6C1 /* SmartView.swift */,
 				E9F06D522E808A0600CDB6C1 /* Extensions.swift */,
 				E9F06D4E2E803F9900CDB6C1 /* SpeechRecognizer.swift */,
 				E9F06D3F2E7FA84300CDB6C1 /* MLMainView.swift */,
@@ -305,6 +308,7 @@
 				71F286B32C2DE54E0004D109 /* SegmentationModelHelper.swift in Sources */,
 				E9F06D3C2E7FA1A100CDB6C1 /* CameraManager.swift in Sources */,
 				D8C894812BE931A20043DB71 /* SegmentationApp.swift in Sources */,
+				E9F06D552E80A7DF00CDB6C1 /* SmartView.swift in Sources */,
 				71E1FD242C12C88A000E93B1 /* MainView.swift in Sources */,
 				E9F06D382E7F9E8800CDB6C1 /* CameraViewModel.swift in Sources */,
 				711F1F172C2CAD310079B854 /* DETRResnet50SemanticSegmentationF16P8.mlpackage in Sources */,
