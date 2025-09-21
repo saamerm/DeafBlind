@@ -1,6 +1,6 @@
 //
 //  CameraViewModel.swift
-//  ImageSegmentationDETR
+//  SeeHearBraille
 //
 //  Created by Saamer Mansoor on 9/20/25.
 //  Copyright © 2025 Apple. All rights reserved.

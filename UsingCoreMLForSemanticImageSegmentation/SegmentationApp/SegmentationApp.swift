@@ -15,8 +15,9 @@ struct CameraApp: App {
 
     var body: some Scene {
         WindowGroup {
-//            MainView()
-            MLMainView()
+            IntroView()
+//            MLMainView()
+            //            MainView()
 //            HomeView()
         }
     }

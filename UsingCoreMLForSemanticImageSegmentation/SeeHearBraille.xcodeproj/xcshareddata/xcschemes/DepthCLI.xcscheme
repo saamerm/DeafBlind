@@ -17,7 +17,7 @@
                BlueprintIdentifier = "D8C894B92BEA8F5E0043DB71"
                BuildableName = "SegmentationCLI"
                BlueprintName = "SegmentationCLI"
-               ReferencedContainer = "container:ImageSegmentationDETR.xcodeproj">
+               ReferencedContainer = "container:SeeHearBraille.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "D8C894B92BEA8F5E0043DB71"
             BuildableName = "SegmentationCLI"
             BlueprintName = "SegmentationCLI"
-            ReferencedContainer = "container:ImageSegmentationDETR.xcodeproj">
+            ReferencedContainer = "container:SeeHearBraille.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "D8C894B92BEA8F5E0043DB71"
             BuildableName = "SegmentationCLI"
             BlueprintName = "SegmentationCLI"
-            ReferencedContainer = "container:ImageSegmentationDETR.xcodeproj">
+            ReferencedContainer = "container:SeeHearBraille.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

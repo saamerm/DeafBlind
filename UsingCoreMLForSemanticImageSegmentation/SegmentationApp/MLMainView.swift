@@ -1,6 +1,6 @@
 //
 //  MLMainView.swift
-//  ImageSegmentationDETR
+//  SeeHearBraille
 //
 //  Created by Saamer Mansoor on 9/20/25.
 //  Copyright © 2025 Apple. All rights reserved.
@@ -80,7 +80,7 @@ struct MLMainView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
 
             if !viewModel.predictedLabels.isEmpty {
-                Text("Tap a label to highlight the object.")
+                Text("New analysis will run in 5 seconds.")
                     .font(.caption)
             }
             
@@ -94,10 +94,8 @@ struct MLMainView: View {
             .frame(height: 150) // Give the scroll view a fixed height
 
             if !viewModel.isModelLoaded {
-                ProgressView("Loading model...")
-            }
-            
-            if viewModel.predictedLabels.isEmpty && viewModel.isModelLoaded {
+                ProgressView("Loading the AI model, this may take a few minutes but is only done once...")
+            } else if viewModel.predictedLabels.isEmpty && viewModel.isModelLoaded {
                 Text("Point the camera at an object to begin analysis.")
             }
 
