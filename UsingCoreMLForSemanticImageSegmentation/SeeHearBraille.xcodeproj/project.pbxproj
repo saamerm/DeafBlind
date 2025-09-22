@@ -467,6 +467,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = SeeHearBraille;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses your camera to capture the frame for image recognition";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses the microphone to transcribe speech to text so it can be used by Braille keyboards";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app uses the speech recognition on your phone to transcribe speech to text so it can be used by Braille keyboards";
@@ -512,6 +513,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = SeeHearBraille;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses your camera to capture the frame for image recognition";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses the microphone to transcribe speech to text so it can be used by Braille keyboards";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app uses the speech recognition on your phone to transcribe speech to text so it can be used by Braille keyboards";

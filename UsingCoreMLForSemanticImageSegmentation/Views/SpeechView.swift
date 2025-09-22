@@ -69,7 +69,7 @@ struct SpeechView: View {
     @State private var brailleKeyCount: String = ""
     @FocusState private var isTextFieldFocused : Bool
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack(spacing: 20) {
                     
@@ -136,6 +136,7 @@ struct SpeechView: View {
             .padding(.vertical)
             .navigationTitle("Speech Converter")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationViewStyle(.stack)
         }
     }
 }

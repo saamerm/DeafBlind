@@ -9,7 +9,7 @@ import SwiftUI
 
 struct VisionView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView{
                 VStack {
                     BoxView()
@@ -20,7 +20,7 @@ struct VisionView: View {
             .padding(1)
             .navigationTitle("Scene Description")
             .navigationBarTitleDisplayMode(.inline)
-            //        .navigationBarTitleTextColor(Color("SecondaryColor"))
+            .navigationViewStyle(.stack)
         }
     }
 }
@@ -38,6 +38,12 @@ struct BoxView: View {
 //                } else {
 //                    if text.contains("TV") || text.contains("laptop"){
                         Text(displayText)
+                    .foregroundColor(.white) // make text white
+                    .padding() // some spacing inside the box
+                    .background(
+                        Color.black.opacity(0.6) // semi-transparent black box
+                    )
+                    .cornerRadius(8) // optional rounded corners
 //                        Text("The TV is showing: ")
 //                        ForEach(text, id: \.self){
 //                            Text($0)

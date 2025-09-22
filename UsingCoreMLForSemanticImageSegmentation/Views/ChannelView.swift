@@ -29,7 +29,7 @@ struct ChannelView: View {
     }
     
     var body: some View {
-        NavigationView{
+        NavigationStack{
             VStack(spacing: 20) {
                 Text("Choose your State, City & Channel Category to find what numbers to press on your remote")
                 // State picker
@@ -71,8 +71,9 @@ struct ChannelView: View {
                 }
             }
             .padding()
-            .navigationTitle("Channel Finder").navigationBarTitleDisplayMode(.inline)
-            //        .navigationBarTitleTextColor(Color("SecondaryColor"))
+            .navigationTitle("Channel Finder")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationViewStyle(.stack)
         }
     }
 }
