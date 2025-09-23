@@ -250,7 +250,7 @@ This project is licensed under the terms specified in the LICENSE file.
 ## 📞 Contact
 
 For questions, suggestions, or support:
-- **Developer**: Saamer Mansoor
+- **Developer**: Saamer Mansoor, Kyle Peterson, Hitesh Parikh
 - **Repository**: [GitHub Repository](https://github.com/saamerm/DeafBlind)
 - **Privacy Policy**: Available in the repository
 
