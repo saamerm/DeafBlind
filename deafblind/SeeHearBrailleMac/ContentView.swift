@@ -1,8 +1,9 @@
 //
 //  ContentView.swift
-//  deafblind
+//  SeeHearBrailleMac
 //
-//  Created by Saamer Mansoor on 9/20/25.
+//  Created by Saamer Mansoor on 9/22/25.
+//  Copyright © 2025 Apple. All rights reserved.
 //
 
 import SwiftUI

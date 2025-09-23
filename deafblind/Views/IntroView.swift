@@ -27,7 +27,7 @@ struct IntroView: View {
                         Text("Welcome to SeeHearBraille")
                             .fontWeight(.bold)
                             .padding()
-                            .font(Font.custom("Avenir", size: 18))
+                            .font(Font.custom("Avenir", size: 20))
                             .foregroundColor(Color("SecondaryColor"))
                             .padding(.horizontal)
                         Text("""
@@ -49,9 +49,7 @@ You don’t need to see or hear—just touch and read.
                             }
                         Button(
                             action: {
-#if !os(macOS) || APPCLIP
                                 simpleSuccessHaptic()
-#endif
                                 if emailAddress != ""{
                                     Task{
 //                                                                                await uploadEmail(emailAddress: emailAddress)
@@ -83,8 +81,10 @@ You don’t need to see or hear—just touch and read.
     IntroView()
 }
 func simpleSuccessHaptic() {
+#if !os(macOS) || APPCLIP
     let generator = UINotificationFeedbackGenerator()
     generator.notificationOccurred(.success)
+#endif
 }
 
 func uploadEmail(_ count: Int = 0, emailAddress: String) async{

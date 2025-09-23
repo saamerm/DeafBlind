@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -33,6 +33,10 @@
 		E9F06D4F2E803F9A00CDB6C1 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F06D4E2E803F9900CDB6C1 /* SpeechRecognizer.swift */; };
 		E9F06D532E808A0800CDB6C1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F06D522E808A0600CDB6C1 /* Extensions.swift */; };
 		E9F06D552E80A7DF00CDB6C1 /* SmartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F06D542E80A7D900CDB6C1 /* SmartView.swift */; };
+		E9F06D652E81300800CDB6C1 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F06D422E80379A00CDB6C1 /* IntroView.swift */; };
+		E9F06D662E81304400CDB6C1 /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F06D432E8037AA00CDB6C1 /* MyTabView.swift */; };
+		E9F06D672E81305200CDB6C1 /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F06D462E8037D300CDB6C1 /* ChannelView.swift */; };
+		E9F06D682E81305B00CDB6C1 /* SpeechView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F06D442E8037BB00CDB6C1 /* SpeechView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -76,7 +80,12 @@
 		E9F06D4E2E803F9900CDB6C1 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		E9F06D522E808A0600CDB6C1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E9F06D542E80A7D900CDB6C1 /* SmartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartView.swift; sourceTree = "<group>"; };
+		E9F06D5A2E812FF300CDB6C1 /* SeeHearBrailleMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeeHearBrailleMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E9F06D5B2E812FF300CDB6C1 /* SeeHearBrailleMac */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SeeHearBrailleMac; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D8C8947A2BE931A10043DB71 /* Frameworks */ = {
@@ -91,6 +100,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8C894C32BEA8F8E0043DB71 /* ArgumentParser in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9F06D572E812FF300CDB6C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +135,7 @@
 				E9F06D412E80379400CDB6C1 /* Views */,
 				D8C894CF2BEAD0E70043DB71 /* Common */,
 				D8C8947F2BE931A10043DB71 /* SegmentationApp */,
+				E9F06D5B2E812FF300CDB6C1 /* SeeHearBrailleMac */,
 				D8C8947E2BE931A10043DB71 /* Products */,
 				323E663B1D0ADDCC60F0EFD9 /* Configuration */,
 				3666B307FEF5770A1B6C8895 /* LICENSE */,
@@ -130,6 +147,7 @@
 			children = (
 				D8C8947D2BE931A10043DB71 /* SegmentationApp.app */,
 				D8C894BA2BEA8F5E0043DB71 /* SegmentationCLI */,
+				E9F06D5A2E812FF300CDB6C1 /* SeeHearBrailleMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -235,6 +253,28 @@
 			productReference = D8C894BA2BEA8F5E0043DB71 /* SegmentationCLI */;
 			productType = "com.apple.product-type.tool";
 		};
+		E9F06D592E812FF300CDB6C1 /* SeeHearBrailleMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9F06D622E812FF400CDB6C1 /* Build configuration list for PBXNativeTarget "SeeHearBrailleMac" */;
+			buildPhases = (
+				E9F06D562E812FF300CDB6C1 /* Sources */,
+				E9F06D572E812FF300CDB6C1 /* Frameworks */,
+				E9F06D582E812FF300CDB6C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E9F06D5B2E812FF300CDB6C1 /* SeeHearBrailleMac */,
+			);
+			name = SeeHearBrailleMac;
+			packageProductDependencies = (
+			);
+			productName = SeeHearBrailleMac;
+			productReference = E9F06D5A2E812FF300CDB6C1 /* SeeHearBrailleMac.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -242,7 +282,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1600;
+				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 1600;
 				ORGANIZATIONNAME = Apple;
 				TargetAttributes = {
@@ -251,6 +291,9 @@
 					};
 					D8C894B92BEA8F5E0043DB71 = {
 						CreatedOnToolsVersion = 16.0;
+					};
+					E9F06D592E812FF300CDB6C1 = {
+						CreatedOnToolsVersion = 26.0;
 					};
 				};
 			};
@@ -272,6 +315,7 @@
 			targets = (
 				D8C8947C2BE931A10043DB71 /* SegmentationApp */,
 				D8C894B92BEA8F5E0043DB71 /* SegmentationCLI */,
+				E9F06D592E812FF300CDB6C1 /* SeeHearBrailleMac */,
 			);
 		};
 /* End PBXProject section */
@@ -284,6 +328,13 @@
 				E9F06D4D2E80391500CDB6C1 /* Launch Screen.storyboard in Resources */,
 				D8C894892BE931A30043DB71 /* Preview Assets.xcassets in Resources */,
 				D8C894852BE931A30043DB71 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9F06D582E812FF300CDB6C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +374,17 @@
 			files = (
 				D8C894D22BEAD1230043DB71 /* CoreImageExtensions.swift in Sources */,
 				71F286B22C2DE54E0004D109 /* SegmentationModelHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9F06D562E812FF300CDB6C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9F06D662E81304400CDB6C1 /* MyTabView.swift in Sources */,
+				E9F06D672E81305200CDB6C1 /* ChannelView.swift in Sources */,
+				E9F06D682E81305B00CDB6C1 /* SpeechView.swift in Sources */,
+				E9F06D652E81300800CDB6C1 /* IntroView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,6 +634,74 @@
 			};
 			name = Release;
 		};
+		E9F06D632E812FF400CDB6C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VTU445YWD6;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 Apple. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beaware.SeeHearBrailleMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E9F06D642E812FF400CDB6C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VTU445YWD6;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 Apple. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beaware.SeeHearBrailleMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -598,6 +728,15 @@
 			buildConfigurations = (
 				D8C894BF2BEA8F5E0043DB71 /* Debug */,
 				D8C894C02BEA8F5E0043DB71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9F06D622E812FF400CDB6C1 /* Build configuration list for PBXNativeTarget "SeeHearBrailleMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9F06D632E812FF400CDB6C1 /* Debug */,
+				E9F06D642E812FF400CDB6C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

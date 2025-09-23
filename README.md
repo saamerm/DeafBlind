@@ -39,7 +39,7 @@ This app addresses the unique needs of deaf-blind individuals by:
 
 The project contains the main SeeHearBraille application:
 
-### Main App (`UsingCoreMLForSemanticImageSegmentation/`)
+### Main App (`deafblind/`)
 - **Entry Point**: `SegmentationApp.swift` - Main app entry point with `IntroView`
 - **Welcome Screen**: `IntroView` - Privacy policy agreement and app introduction
 - **Main Interface**: `MyTabView` - Tab-based navigation with three main features
@@ -87,7 +87,7 @@ The project contains the main SeeHearBraille application:
 2. **Open in Xcode**
    ```bash
    # Open the main SeeHearBraille app
-   open UsingCoreMLForSemanticImageSegmentation/SeeHearBraille.xcodeproj
+   open deafblind/SeeHearBraille.xcodeproj
    ```
 
 3. **Configure Project Settings**
