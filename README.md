@@ -254,6 +254,15 @@ For questions, suggestions, or support:
 - **Repository**: [GitHub Repository](https://github.com/saamerm/DeafBlind)
 - **Privacy Policy**: Available in the repository
 
+## 🔗 Submission Links
+
+- Captioned 60 second Ad video URL: https://www.youtube.com/watch?v=qRN_nitff10
+- Captioned 5 minute pitch video URL: [ https://youtu.be/rSBIvyGcbB8](https://www.youtube.com/watch?v=rSBlvyGcbB8),
+- Live URL: Waiting for approval from Apple. It's restrictive because they try to ensure safety. Will update the GitHub repo readme once it does get approved
+- Pitch Deck: https://docs.google.com/presentation/d/1cZAG-1_gR2UqXI0AKpZboyzmZUgIYYkD
+- Responsible AI Disclosure: https://docs.google.com/document/d/1-jSgq9VlbfORuwyGApSwcMOnsKp7N47-gs3_D6NO6Lo
+- Project Write-up: https://docs.google.com/document/d/1Inr0gsbQ3PZqHula0KA9lGZx2cskXVQitYTgjnJocrg
+
 ---
 
-**Note**: This app is designed specifically for deaf-blind users and requires careful testing with actual braille devices and accessibility tools. Always test with real users to ensure proper functionality.
+**Note**: This app is designed specifically for deaf-blind users and requires more testing with accessibility tools. Always test with real users to ensure proper functionality.
